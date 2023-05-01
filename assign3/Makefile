@@ -1,6 +1,6 @@
 recordmanager: test_assign3_1.o record_mgr.o buffer_mgr.o storage_mgr.o dberror.o buffer_mgr_stat.o rm_serializer.o expr.o
 	gcc -o recordmanager test_assign3_1.o record_mgr.o buffer_mgr.o storage_mgr.o dberror.o buffer_mgr_stat.o rm_serializer.o expr.o
-test_assign2_1.o: test_assign3_1.c
+test_assign3_1.o: test_assign3_1.c
 	gcc -c -g test_assign3_1.c
 record_mgr.o: record_mgr.c
 	gcc -c -g record_mgr.c
@@ -19,4 +19,4 @@ buffer_mgr_stat.o: buffer_mgr_stat.c
 run: recordmanager
 	./recordmanager
 clean:
-	rm recordmanager test_assign3_1.o record_mgr.o buffer_mgr.o storage_mgr.o dberror.o buffer_mgr_stat.o
+	rm recordmanager test_assign3_1.o record_mgr.o buffer_mgr.o storage_mgr.o rm_serializer.o dberror.o expr.o buffer_mgr_stat.o
